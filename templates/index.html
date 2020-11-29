@@ -1,0 +1,44 @@
+<html>
+    <head> 
+    <title>Home</title> 
+    <meta name="viewport" content="width=device-width initial-scale=1">
+    </head> 
+    <body>
+	    <h1 style="font-weight:bold">WELCOME</h1>
+	    <hr>
+	    <h1 style="margin-left:10%">[ 추억을 담는ㄷr..... ]</h1>
+
+	    <p>
+	    <div style="margin-left:10%">
+		{%if True%}
+	    <img style="margin-left:20% width:50%; height:50%"src="{{url_for('static',filename=imgname)}}"/>
+	    {%endif%}
+	    </div>
+	    <div>
+		    <button style="display:block; width: 30%; height: 10%; margin-left:10%" > <a style="font-size:300%; font-weight: bold;"href="{{ url_for('capture') }}">ㅇㅅㅇ</a></button>
+	    </div>
+
+	    </p>
+
+
+
+	    <h1  style="margin-left:10%">[ 내 마음속 문구를 insert한ㄷr.... ]</h1>
+	    <form action='/lcd' method='post'>
+		    <input style="font-size:250%; display:block; width: 30%; height: 10%; margin-left:10%" type='text' name="lcd"/><br>
+		    <p>
+		    <a  style=" font-size:300%; font-weight:bold;display:block; width: 30%; height: 10%; margin-left:10%"href="{{ url_for('lcd', state=1) }}"> <input  style=" font-size:300%; font-weight:bold; width: 100%; " type='submit' value="ㅇㅍㅇ" > </a>
+		    </p>
+	    </form>
+
+	    <h1  style="margin-left:10%">[ number i love를  담는ㄷr.... ]</h1>
+	    <form action='/segment' method='post'>
+		    <input style="font-size:250%; display:block; width: 30%; height: 10%; margin-left:10%" type='text' name="segment"/><br>
+		    <p>
+		    <a  style="display:block; width: 30%; height: 10%; margin-left:10%"href="{{ url_for('segment', state=1) }}"> <input style="width:100%;font-size:300%; font-weight: bold;" type="submit" value="ㅇㅊㅇ" > </a>
+		    </p>
+
+	    </form>
+
+
+    </body>
+</html>
